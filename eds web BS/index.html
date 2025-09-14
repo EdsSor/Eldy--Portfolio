@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eldy Soriano II | Portfolio</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00ffff',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="text-white overflow-x-hidden">
+  <!-- Background Video -->
+  <video autoplay muted loop id="back-video" playsinline>
+    <source src="img/bg.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 glass-effect">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="logo">
+        <a href="#home">
+          <img src="img/logo.png" alt="Logo" class="h-20 w-20 transition-transform hover:scale-110" />
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white text-3xl">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav id="nav-menu" class="hidden md:flex space-x-8">
+        <a href="#home" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="nav-link text-white hover:text-primary transition-colors">About</a>
+        <a href="#projects" class="nav-link text-white hover:text-primary transition-colors">Projects</a>
+        <a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu"
+        class="absolute top-full right-0 mt-2 w-48 glass-effect rounded-lg shadow-lg hidden md:hidden">
+        <div class="py-2">
+          <a href="#home" class="block px-4 py-2 nav-link text-white hover:text-primary transition-colors">Home</a>
+          <a href="#about" class="block px-4 py-2 nav-link text-white hover:text-primary transition-colors">About</a>
+          <a href="#projects"
+            class="block px-4 py-2 nav-link text-white hover:text-primary transition-colors">Projects</a>
+          <a href="#contact"
+            class="block px-4 py-2 nav-link text-white hover:text-primary transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center gap-8">
+        <div class="text-center">
+          <h2 class="text-xl md:text-2xl mb-2 animate-fade-in-up delay-100">Hello, I'm</h2>
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up delay-200">
+            <span id="typewriter-text" class="typewriter"></span>
+          </h1>
+          <h3 class="text-xl md:text-2xl mb-6 animate-fade-in-up delay-300">
+            And I'm a <span class="text-primary font-bold">student</span>
+          </h3>
+          <p class="text-gray-300 text-lg mb-8 max-w-md mx-auto animate-fade-in-up delay-400">
+            I am an aspiring <span class="text-primary font-semibold">software engineer</span>, passionate about
+            technology and continuous learning.
+          </p>
+
+          <!-- Social Links -->
+          <div class="flex justify-center gap-4 mb-8 animate-fade-in-up delay-500">
+            <a href="https://www.facebook.com/eldysorianoll/" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/facebook.svg" alt="Facebook" class="w-10 h-10 filter-primary" />
+            </a>
+            <a href="https://www.instagram.com/20_eds/" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/instagram.svg" alt="Instagram" class="w-10 h-10 filter-primary" />
+            </a>
+            <a href="https://github.com/EdsSor" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/github.svg" alt="GitHub" class="w-10 h-10 filter-primary" />
+            </a>
+            <a href="https://www.linkedin.com/in/eldysorianoll/" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/linkedin.svg" alt="LinkIN" class="w-10 h-10 filter-primary" />
+            </a>
+          </div>
+
+          <!-- Download CV Button -->
+          <div class="animate-fade-in-up delay-600">
+            <a href="Eldy_CV.pdf" download
+              class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 shadow-lg">
+              DOWNLOAD CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6">
+      <!-- About Me -->
+      <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
+        <img src="img/eds.jpeg" alt="Eldy Soriano II"
+          class="w-48 h-48 rounded-2xl object-cover border-2 border-primary shadow-primary" />
+        <div class="text-center md:text-left">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">ELDY SORIANO II</h1>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            An IT student and aspiring Software Engineer. I am passionate about technology, web development and
+            continuous learning.<br />
+            <em class="text-primary">Coding is not just a skill for me—it's a way of life!</em>
+          </p>
+        </div>
+      </div>
+
+      <!-- Personal Details & Interests -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-primary mb-6">Personal Details</h3>
+          <div class="space-y-3">
+            <p><strong>Age:</strong> 20 years old</p>
+            <p><strong>Birthdate:</strong> 12/11/04</p>
+            <p><strong>Email:</strong> eldysorianovagmail.com</p>
+            <p><strong>Phone:</strong> 09916141625</p>
+            <p><strong>Address:</strong> Philippines, Pangasinan Urdaneta City</p>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-primary mb-6">Interests</h3>
+          <div class="flex gap-4 flex-wrap">
+            <a href="https://open.spotify.com/" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/spotify.svg" alt="Spotify" class="w-10 h-10 filter-primary" />
+            </a>
+            <a href="https://www.netflix.com/ph-en/" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/netflix.svg" alt="Netflix" class="w-10 h-10 filter-primary" />
+            </a>
+            <a href="https://www.make.com/" target="_blank" class="social-icon transition-transform hover:scale-110">
+              <img src="img/workflow.png" alt="automation" class="w-10 h-10 filter-primary" />
+            </a>
+            <a href="https://code.visualstudio.com/" target="_blank"
+              class="social-icon transition-transform hover:scale-110">
+              <img src="img/code.svg" alt="VS Code" class="w-10 h-10 filter-primary" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-12">My Skills</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Web Development -->
+          <div class="skill-category glass-effect p-6 rounded-2xl border-2 border-primary/30">
+            <h3 class="category-header">Web Development</h3>
+            <div id="webdev-skills">
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">HTML</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">100%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="100"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">CSS</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">40%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="40"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">JavaScript</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">20%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="skill-category glass-effect p-6 rounded-2xl border-2 border-primary/30">
+            <h3 class="category-header">Backend Development</h3>
+            <div id="backend-skills">
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Python</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">35%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="35"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">PHP</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">30%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="30"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Frameworks -->
+          <div class="skill-category glass-effect p-6 rounded-2xl border-2 border-primary/30">
+            <h3 class="category-header">Frameworks</h3>
+            <div id="frameworks-skills">
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Tailwind CSS</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">40%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="40"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Flask</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">10%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="10"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Django</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">10%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="10"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Laravel</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">20%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Automation Tools -->
+          <div class="skill-category glass-effect p-6 rounded-2xl border-2 border-primary/30">
+            <h3 class="category-header">Automation Tools</h3>
+            <div id="automation-skills">
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">N8N</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">35%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="35"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Zapier</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">35%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="35"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">Make</span>
+                  <span class="skill-percentage text-sm font-bold text-primary">35%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="35"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-24 relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <div class="inline-block">
+              <h2 class="text-3xl font-bold text-center mb-4">
+                Projects
+              </h2>
+
+            </div>
+
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+            <!-- Project 1: Personal Portfolio -->
+            <div class="project-card rounded-3xl overflow-hidden transition-all duration-500 group">
+              <div class="relative overflow-hidden">
+                <div class="project-image h-56 flex items-center justify-center relative">
+                  <img src="img/edspo.png" alt="Personal Portfolio" class="w-full h-full object-cover rounded-t-3xl" />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span
+                    class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium border border-green-500/30">Live</span>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-2 h-8 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full"></div>
+                  <h3 class="text-xl font-bold text-white">Personal Portfolio</h3>
+                </div>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                  A responsive personal portfolio showcasing skills, projects, and professional experience. Built with
+                  modern web technologies and optimized for performance.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">HTML5</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">CSS3</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">JavaScript</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">Tailwind</span>
+                </div>
+
+                <div class="flex gap-4">
+                  <a href="https://edscvweb.netlify.app/" target="_blank"
+                    class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                    <i class="fas fa-external-link-alt text-xs"></i>
+                    Live Demo
+                    <i
+                      class="fas fa-arrow-right text-xs opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all"></i>
+                  </a>
+                  <a href="https://github.com/EdsSor" target="_blank"
+                    class="flex items-center gap-2 text-gray-400 hover:text-white text-sm font-medium transition-colors">
+                    <i class="fab fa-github text-xs"></i>
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Workflow Automation -->
+            <div class="project-card rounded-3xl overflow-hidden transition-all duration-500 group">
+              <div class="relative overflow-hidden">
+                <div class="project-image h-56 flex items-center justify-center ">
+                  <img src="img/make.png" alt="Automation Hub" class="w-full h-full object-cover rounded-t-3xl" />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span
+                    class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-medium border border-blue-500/30">Active</span>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-2 h-8 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full"></div>
+                  <h3 class="text-xl font-bold text-white">Workflow Automation</h3>
+                </div>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                  Automations run by listening for a trigger, processing the data, and performing actions across tools —
+                  saving time and reducing manual work.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">Zapier</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">Make</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">n8n</span>
+                </div>
+
+                <div class="flex gap-4">
+                  <a href="https://drive.google.com/drive/folders/1rFKw6eryV389yghxxsy-5o8ZGCq49Q0r?usp=sharing"
+                    target="_blank"
+                    class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                    <i class="fas fa-folder-open text-xs"></i>
+                    View Workflow
+                    <i
+                      class="fas fa-arrow-right text-xs opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Coming Soon -->
+            <div class="project-card rounded-3xl overflow-hidden transition-all duration-500 group">
+              <div class="relative overflow-hidden">
+                <div class="project-image h-56 flex items-center justify-center">
+                  <div class="text-center">
+                    <i class="fas fa-palette text-6xl text-white/90 mb-2"></i>
+                    <div class="text-white/80 text-sm font-medium">COMING SOON</div>
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span
+                    class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-medium border border-purple-500/30">ON-GOING</span>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-2 h-8 bg-gradient-to-b from-rose-400 to-rose-600 rounded-full"></div>
+                  <h3 class="text-xl font-bold text-white">Coming Soon</h3>
+                </div>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                  New project in development. Stay tuned for updates!
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">Figma</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">Photoshop</span>
+                  <span class="tech-badge text-xs px-3 py-1 rounded-full text-blue-300 font-medium">Canva</span>
+                </div>
+
+                <div class="flex gap-4">
+                  <a href="#"
+                    class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                    <i class="fas fa-images text-xs"></i>
+                    View Designs
+                    <i
+                      class="fas fa-arrow-right text-xs opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all"></i>
+                  </a>
+                  <a href="#"
+                    class="flex items-center gap-2 text-gray-400 hover:text-white text-sm font-medium transition-colors">
+                    <i class="fab fa-behance text-xs"></i>
+                    Behance
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <div>
+        <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+        <div class="space-y-9">
+          <div class="flex flex-col md:flex-row gap-6 p-8">
+            <img src="img/ucnhs.png" alt="UCNHS Logo" class="w-32 h-32 object-contain mx-auto md:mx-0" />
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-primary mb-2">Urdaneta City National High School</h3>
+              <p class="font-medium mb-1">Junior High School & Senior High School – ABM</p>
+              <p class="text-sm text-gray-400 mb-3">XHH7+F7P, High School Drive, Urdaneta City, Pangasinan</p>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Completed both Junior and Senior High School education, specializing in Accountancy, Business, and
+                Management (ABM) strand. This background equipped me with essential knowledge in business, finance, and
+                entrepreneurship.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6 p-8">
+            <img src="img/uc.png" alt="UC Logo" class="w-32 h-32 object-contain mx-auto md:mx-0" />
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-primary mb-2">University of the Cordilleras</h3>
+              <p class="font-medium mb-1">Computer Engineering (First Year)</p>
+              <p class="text-sm text-gray-400 mb-3">Gov. Pack Rd, Baguio City, Benguet</p>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Enrolled in Computer Engineering for two trimester, taking core engineering courses and gaining
+                foundational knowledge in programming, electronics, and systems design.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6 p-8">
+            <img src="img/abe.jpg" alt="ABE Logo" class="w-32 h-32 object-contain mx-auto md:mx-0" />
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-primary mb-2">ABE International Business College</h3>
+              <p class="font-medium mb-1">Information Technology (Current)</p>
+              <p class="text-sm text-gray-400 mb-3">Zion 2000 E. A. Building, McArthur Highway, Urdaneta City</p>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Currently pursuing a degree in Information Technology. Coursework includes software development,
+                networking, and database systems, strengthening technical skills for a future IT career.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-3xl font-bold mb-4">CONTACT</h1>
+        <p class="text-gray-300 mb-8">Reach Out And Collaborate</p>
+
+        <!-- Social Links -->
+        <div class="flex justify-center gap-6 mb-12">
+          <a href="https://www.facebook.com/eldysorianoll/" target="_blank"
+            class="social-icon transition-transform hover:scale-110">
+            <img src="img/facebook.svg" alt="Facebook" class="w-12 h-12 filter-primary" />
+          </a>
+          <a href="https://www.instagram.com/20_eds/" target="_blank"
+            class="social-icon transition-transform hover:scale-110">
+            <img src="img/instagram.svg" alt="Instagram" class="w-12 h-12 filter-primary" />
+          </a>
+          <a href="https://github.com/EdsSor" target="_blank" class="social-icon transition-transform hover:scale-110">
+            <img src="img/github.svg" alt="GitHub" class="w-12 h-12 filter-primary" />
+          </a>
+          <a href="mailto:eldysorianova@gmail.com" class="social-icon transition-transform hover:scale-110">
+            <img src="img/gmail-logo.png" alt="Gmail" class="w-12 h-12 filter-primary" />
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="max-w-2xl mx-auto">
+          <form id="contact-form" class="glass-effect p-8 rounded-2xl">
+
+            <div class="mb-6">
+              <label for="name" class="block text-left mb-2 text-sm font-medium">Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                placeholder="Your name" />
+
+            </div>
+
+            <div class="mb-6">
+              <label for="email" class="block text-left mb-2 text-sm font-medium">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                placeholder="name@example.com" />
+
+            </div>
+
+            <div class="mb-6">
+              <label for="message" class="block text-left mb-2 text-sm font-medium">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
+                placeholder="Your message..."></textarea>
+            </div>
+
+            <div id="form-alert" class="mb-4"></div>
+
+            <button type="submit"
+              class="w-full bg-primary text-black font-semibold py-3 rounded-lg hover:bg-cyan-400 transition-colors">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass-effect py-8 text-center">
+    <div class="container mx-auto px-6">
+      <p class="text-gray-400">© 2025 Eldy Soriano II. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

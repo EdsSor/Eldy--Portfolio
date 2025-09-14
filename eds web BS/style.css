@@ -1,0 +1,329 @@
+/* === CSS Variables === */
+:root {
+  --primary-color: #00ffff;
+  --glass-bg: rgba(0, 0, 0, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* === Base Styles === */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Utility Classes === */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.shadow-primary {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.filter-primary {
+  filter: invert(74%) sepia(100%) saturate(1000%) hue-rotate(140deg) brightness(1.2);
+}
+
+/* === Background Video === */
+#back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* === Glass Effect === */
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+/* === Navigation === */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* === Animation Keyframes === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: #2563eb;
+  }
+  51%, 100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === Ripple Effect Animations === */
+@keyframes ripple-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* === Animation Classes === */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* === Animation Delays === */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* === Typewriter Effect === */
+.typewriter {
+  border-right: 3px solid #ff0000;
+  animation: blink 1s infinite;
+  min-height: 1em;
+}
+
+/* === Ripple Effect === */
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.ripple-1 {
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.4) 0%, rgba(0, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.1) 60%, transparent 80%);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.ripple-2 {
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 40%, transparent 70%);
+  animation-duration: 1.2s;
+  animation-delay: 0.1s;
+}
+
+.ripple-3 {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(0, 255, 255, 0.1) 30%, transparent 60%);
+  animation-duration: 1.5s;
+  animation-delay: 0.2s;
+}
+
+/* === Skills Section === */
+.skill-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00f5ff 0%, #00d4ff 100%);
+  border-radius: 50px;
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shine 2s infinite;
+}
+
+.skill-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-item:nth-child(4) { animation-delay: 0.4s; }
+.skill-item:nth-child(5) { animation-delay: 0.5s; }
+.skill-item:nth-child(6) { animation-delay: 0.6s; }
+.skill-item:nth-child(7) { animation-delay: 0.7s; }
+.skill-item:nth-child(8) { animation-delay: 0.8s; }
+.skill-item:nth-child(9) { animation-delay: 0.9s; }
+.skill-item:nth-child(10) { animation-delay: 1.0s; }
+
+.category-header {
+  color: #00f5ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.skill-category {
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  border-color: #00f5ff !important;
+  box-shadow: 0 10px 25px rgba(0, 245, 255, 0.1);
+}
+
+/* === Projects Section === */
+.project-card {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.5s ease;
+}
+
+.project-card:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.tech-badge {
+  background: rgba(37, 99, 235, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(37, 99, 235, 0.4);
+}
+
+.project-image {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-divider {
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.4), transparent);
+}
+
+/* === Form Styling === */
+.focus\:border-primary:focus {
+  border-color: var(--primary-color);
+}
+
+/* === Hover Effects === */
+button:hover,
+.btn:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+img[alt*="Logo"]:hover,
+.profile-pic:hover {
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+.social-icon {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* === Custom Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cccc;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .animate-fade-in-up {
+    animation-delay: 0s !important;
+  }
+  
+  .skill-category {
+    margin-bottom: 1rem;
+  }
+  
+  .project-card {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust ripples for mobile */
+  .ripple-1, .ripple-2, .ripple-3 {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
