@@ -27,9 +27,13 @@ It features a responsive design, smooth animations, and modern UI built with Tai
 ## 📂 Project Structure  
 portfolio/
 │── index.html # Main entry point
+
 │── /img # Images, icons, and background
+
 │── /css # Custom stylesheets
+
 │── /js # JavaScript files
+
 │── README.md # Documentation
 
 
@@ -55,3 +59,4 @@ portfolio/
 - GitHub: [EdsSor](https://github.com/EdsSor)  
 - LinkedIn: [Eldy Soriano ll](https://www.linkedin.com/in/eldysorianoll/)
 - Email: eldysorianovagmail.com  
+
